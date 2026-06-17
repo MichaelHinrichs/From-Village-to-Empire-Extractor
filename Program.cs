@@ -8,7 +8,7 @@ namespace From_Village_to_Empire_Extractor
             BinaryReader br = new(File.OpenRead(args[0]));
 
             if (new string(br.ReadChars(4)) != "WLP2")
-                throw new Exception("This is mot a wlp file.");
+                throw new Exception("This is not a wlp file.");
 
             string path = Path.GetDirectoryName(args[0]) + "\\" + Path.GetFileNameWithoutExtension(args[0]) + "\\";
             Directory.CreateDirectory(path);
